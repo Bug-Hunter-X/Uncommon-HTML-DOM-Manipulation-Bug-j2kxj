@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text is initially visible.
+  </div>
+  <button onclick="myFunction()">Click Me</button>
+
+  <script>
+    function myFunction() {
+      // Incorrectly removing the div element by using the remove() method directly on it 
+      document.getElementById('myDiv').remove(); 
+      // The remove() method should be used on the parentNode of the element to be removed.
+    }
+  </script>
+</body>
+</html>
