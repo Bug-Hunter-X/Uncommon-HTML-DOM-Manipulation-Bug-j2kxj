@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text is initially visible.
+  </div>
+  <button onclick="myFunction()">Click Me</button>
+
+  <script>
+    function myFunction() {
+      // Correctly removing the div element using parentNode
+      const divToRemove = document.getElementById('myDiv');
+      divToRemove.parentNode.removeChild(divToRemove);
+    }
+  </script>
+</body>
+</html>
